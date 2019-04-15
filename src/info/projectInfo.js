@@ -15,7 +15,7 @@ const projectInfo = [
         title: "Score Prediction App",
         description: "In this app, users are able to make predictions on upcoming college football matchups, and get a feed of other users' scores so they can compare.",
         technology: [
-            { category: "Front&nbsp;End", techs: ["HTML5", "CSS3", "jQuery"] },
+            { category: "Front&nbsp;End", techs: ["Javascript", "HTML5", "CSS3", "jQuery"] },
             { category: "Back&nbsp;End", techs: ["Node", "Express", "MongoDB", "Mocha/Chai"] },
             { category: "Dev&nbsp;Ops", techs: ["Travis CI", "Heroku"] }
         ],
@@ -27,7 +27,7 @@ const projectInfo = [
         title: "Weather Song Search",
         description: "Users can input their zip code, and not only get the weather, but also a playlist of songs.",
         technology: [
-            { category: "Front End", techs: ["HTML5", "CSS3", "jQuery"] }
+            { category: "Front End", techs: ["HTML5", "CSS3", "Javascript", "jQuery"] }
         ],
         liveLink: "https://eliwemyss.github.io/weather-song-search/",
         gitHubLink: "https://github.com/eliwemyss/weather-song-search",

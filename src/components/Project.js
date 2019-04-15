@@ -1,4 +1,5 @@
 import React from 'react';
+import Technology from './Technology';
 import './styles/Project.css';
 
 const Project = (props) => {
@@ -12,6 +13,7 @@ const Project = (props) => {
                 </div>
                 <div className="flexCol">
                     <p className="para" dangerouslySetInnerHTML={{ __html: props.description }}></p>
+                    <Technology tech={props.technology} />
                     <div className="btnCont">
                         <a href={props.liveLink} target="_blank" rel="noopener noreferrer" className="btn">
                             LIVE DEMO

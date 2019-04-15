@@ -5,7 +5,7 @@
 }
 
 .link {
-    color: skyblue;
+    color: #70C1B3;
     text-decoration: none;
 }
 
@@ -21,7 +21,7 @@
     left: 51%;
     right: 51%;
     bottom: 0;
-    background: skyblue;
+    background: #70C1B3;
     height: 3px;
     transition-property: left, right;
     transition-duration: 0.3s;

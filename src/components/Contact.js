@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ContactLink from './ContactLink';
-import Bounce from 'react-reveal/Bounce';
 import { animateScroll as scroll } from 'react-scroll'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

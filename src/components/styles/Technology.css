@@ -1,0 +1,46 @@
+.techHeading {
+    margin: 0 auto 0.4rem;
+    text-align: center;
+}
+
+.icon {
+    margin: 0 10px;
+    color: tomato;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.column {
+    padding: 0 0.4rem;
+}
+
+.catHeading {
+    color: skyblue;
+    font-size: 1rem;
+    margin: 10px auto;
+}
+
+.list {
+    padding: 0;
+    margin: 0;
+}
+
+.techItem {
+    list-style: none;
+    font-size: 0.85rem;
+}
+
+@media (min-width: 400px) {
+    .techItem {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .techHeading {
+        margin-top: 0.6rem;
+    }
+}

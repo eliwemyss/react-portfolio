@@ -17,9 +17,6 @@ class ContactLink extends Component {
     }
 
     render() {
-        // set CSS class for link based on hover state
-        const hoverClass = this.state.isHovered ? "linkText hoveredLinkText" : "linkText";
-
         return (
             <div className="contact" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
                 <a className="link" href={this.props.linkTarget} target="_blank" rel="noopener noreferrer">
