@@ -1,26 +1,22 @@
 import React from 'react';
-import styles from './styles/Project.css';
+import './styles/Project.css';
 
 const Project = (props) => {
-    let flexOrder;
-    if (props.order === 1) {
-        flexOrder = styles.flexRight;
-    }
 
     return (
-        <div className={styles.project}>
-            <h3 className={styles.title}>{props.title}</h3>
-            <div className={styles.flexRow}>
-                <div className={`${styles.imgContainer} ${flexOrder}`}>
-                    <img className={styles.screenshot} src={props.screenshot} alt={props.title + " Screenshot"} />
+        <div className="project">
+            <h3 className="title">{props.title}</h3>
+            <div className="flexRow">
+                <div className="imgContainer">
+                    <img className="screenshot" src={props.screenshot} alt={props.title + " Screenshot"} />
                 </div>
-                <div className={styles.flexCol}>
-                    <p className={styles.para} dangerouslySetInnerHTML={{ __html: props.description }}></p>
-                    <div className={styles.btnCont}>
-                        <a href={props.liveLink} target="_blank" rel="noopener noreferrer" className={styles.btn}>
+                <div className="flexCol">
+                    <p className="para" dangerouslySetInnerHTML={{ __html: props.description }}></p>
+                    <div className="btnCont">
+                        <a href={props.liveLink} target="_blank" rel="noopener noreferrer" className="btn">
                             LIVE DEMO
                         </a>
-                        <a href={props.gitHubLink} target="_blank" rel="noopener noreferrer" className={styles.btn}>
+                        <a href={props.gitHubLink} target="_blank" rel="noopener noreferrer" className="btn">
                             GITHUB REPO
                         </a>
                     </div>

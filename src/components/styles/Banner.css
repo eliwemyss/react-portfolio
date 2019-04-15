@@ -1,0 +1,86 @@
+.banner {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.wrapper {
+    padding: 5px;
+    border-radius:20px;
+    background: rgba(0,0,0,0.6);
+    z-index: 1;
+    margin: 0 35px;
+    max-height: 80%;
+}
+
+.mainHeading {
+    font-size: 40px;
+    color: white;
+}
+
+.subHeading {
+    margin: 1rem;
+    font-size: 20px;
+}
+
+.separator {
+    height: 4px;
+    width: 0px;
+    margin: 0 auto;
+    background-color: #F3FFBD;
+    transition: width 1.5s;
+}
+
+.growSeparator {
+    width: 40%;
+}
+
+.downBtn {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.downBtnIcon {
+    color: #70C1B3;
+    font-size: calc(2rem + 2vw);
+    cursor: pointer;
+    filter: drop-shadow(0 0 2px black);
+}
+
+.downBtnIcon:hover {
+    color: white;
+}
+
+@media (min-width: 400px) {
+    .wrapper {
+       margin: 0 auto;
+    }
+}
+
+@media (min-height: 450px) and (min-width: 800px) {
+    .wrapper {
+        padding: 30px;
+    }
+}
+
+@media (min-width: 800px) {
+    .mainHeading {
+       font-size: calc(3vw + 2vh);
+    }
+}
+
+@media (min-width: 1000px) {
+    .subHeading {
+        font-size: calc(1.5vw + 1vh);
+    }
+}

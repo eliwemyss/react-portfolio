@@ -1,0 +1,51 @@
+.contact {
+    margin: 10px auto;
+    font-size: 1.75vw;
+    list-style: none;
+}
+
+.link {
+    color: skyblue;
+    text-decoration: none;
+}
+
+.linkText {
+    position: relative;
+    padding-bottom: 3px;
+    display: inline-block;
+}
+
+.linkText:before {
+    content: "";
+    position: absolute;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: skyblue;
+    height: 3px;
+    transition-property: left, right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.hoveredLinkText:before {
+    left: 0;
+    right: 0;
+}
+
+.icon {
+    margin: 0 10px;
+    font-size: 2.5vw;
+    vertical-align: top;
+    color: white;
+}
+
+@media (max-width: 1200px) {
+    .contact {
+        font-size: 21px;
+    }
+
+    .icon {
+        font-size: 28px;
+    }
+}

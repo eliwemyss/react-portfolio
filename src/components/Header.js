@@ -1,23 +1,23 @@
 import React from 'react';
-import styles from './styles/NavBar.css';
+import './styles/Header.css';
 import { Link } from 'react-scroll'
 
-const NavBar = () => {
+const Header = () => {
     return (
-        <header className={styles.pageHeader}>
-            <nav className={styles.flex}>
+        <header className="pageHeader">
+            <nav className="flex">
                 <Link to="scrollAbout" smooth={true} duration={500} offset={-25} tabIndex={0}>
-                    <span className={styles.navLink}>ABOUT</span>
+                    <span className="navLink">ABOUT</span>
                 </Link>
                 <Link to="scrollProjects" smooth={true} duration={500} offset={-25} tabIndex={0}>
-                    <span className={styles.navLink}>PROJECTS</span>
+                    <span className="navLink">PROJECTS</span>
                 </Link>
                 <Link to="scrollContact" smooth={true} duration={500} tabIndex={0}>
-                    <span className={styles.navLink}>CONTACT</span>
+                    <span className="navLink">CONTACT</span>
                 </Link>
             </nav>
         </header>
     );
 }
 
-export default NavBar;
+export default Header;

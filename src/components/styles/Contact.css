@@ -1,0 +1,32 @@
+.contactSection {
+    text-align: center;
+    border: none;
+}
+
+.contactList {
+    text-align: left;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.topButton {
+    display: block;
+    margin: 30px auto 10px;
+    color: skyblue;
+    background: black;
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.topButton:hover {
+    color: black;
+    background: skyblue;
+}
+
+.icon {
+    margin-right: 10px;    
+}
