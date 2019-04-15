@@ -8,12 +8,17 @@
     color: #70C1B3;
     text-decoration: none;
 }
+.link:hover {
+    color: white;
+}
 
 .linkText {
     position: relative;
     padding-bottom: 3px;
     display: inline-block;
 }
+
+
 
 .linkText:before {
     content: "";

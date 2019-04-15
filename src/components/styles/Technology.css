@@ -3,11 +3,6 @@
     text-align: center;
 }
 
-.icon {
-    margin: 0 10px;
-    color: tomato;
-}
-
 .container {
     display: flex;
     justify-content: space-around;
@@ -18,7 +13,7 @@
 }
 
 .catHeading {
-    color: skyblue;
+    color: #70C1B3;
     font-size: 1rem;
     margin: 10px auto;
 }

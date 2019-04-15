@@ -14,7 +14,7 @@ const Banner = () => {
                 <Reveal effect="growSeparator">
                     <div className="separator"></div>
                 </Reveal>
-                    <h2 className="subHeading">FULL STACK DEVELOPER</h2>
+                    <h2 className="subHeading">FULL STACK WEB DEVELOPER</h2>
             </div>
             <div className="downBtn">
                 <Link to="scrollAbout" smooth={true} duration={500} offset={-25} tabIndex={0}>
