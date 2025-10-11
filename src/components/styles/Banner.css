@@ -9,34 +9,38 @@
 }
 
 .wrapper {
-    padding: 5px;
+    padding: 12px;
     border-radius:20px;
-    background: rgba(0,0,0,0.6);
+    background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(0,0,0,0.45));
+    border: 1px solid rgba(255,255,255,0.06);
     z-index: 1;
-    margin: 0 35px;
+    margin: 0 25px;
     max-height: 80%;
 }
 
 .mainHeading {
-    font-size: 40px;
+    font-size: 2.8rem;
     color: white;
+    margin: 0.2rem 0;
 }
 
 .subHeading {
-    margin: 1rem;
-    font-size: 20px;
+    margin: 0.6rem 0 1rem;
+    font-size: 1rem;
+    color: #e8f6f2;
 }
 
 .separator {
     height: 4px;
     width: 0px;
     margin: 0 auto;
-    background-color: #F3FFBD;
-    transition: width 1.5s;
+    background-color: var(--accent);
+    transition: width 1.2s cubic-bezier(.22,.9,.39,1);
+    border-radius: 2px;
 }
 
 .growSeparator {
-    width: 40%;
+    width: 36%;
 }
 
 .downBtn {
@@ -59,6 +63,38 @@
 
 .downBtnIcon:hover {
     color: white;
+}
+
+.ctaRow {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 0.7rem;
+}
+
+.ctaBtn, .ctaGhost {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+}
+
+.ctaBtn {
+    background: var(--accent);
+    box-shadow: 0 6px 18px rgba(112,193,179,0.18);
+}
+
+.ctaGhost {
+    background: rgba(255,255,255,0.08);
+    color: #e8f6f2;
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+.ctaBtn:hover, .ctaGhost:hover {
+    transform: translateY(-2px);
+    transition: transform .18s ease;
 }
 
 @media (min-width: 400px) {

@@ -1,15 +1,24 @@
 .contact {
     margin: 10px auto;
-    font-size: 1.75vw;
+    font-size: 1rem;
     list-style: none;
 }
 
 .link {
-    color: #70C1B3;
+    color: var(--accent-2);
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 .link:hover {
-    color: white;
+    color: var(--accent);
+}
+
+.link:focus-visible {
+    outline: 3px solid rgba(36,123,160,0.14);
+    outline-offset: 3px;
+    border-radius: 4px;
 }
 
 .linkText {
@@ -18,19 +27,15 @@
     display: inline-block;
 }
 
-
-
 .linkText:before {
     content: "";
     position: absolute;
-    left: 51%;
-    right: 51%;
+    left: 50%;
+    right: 50%;
     bottom: 0;
-    background: #70C1B3;
+    background: var(--accent);
     height: 3px;
-    transition-property: left, right;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in-out;
+    transition: left .22s ease, right .22s ease;
 }
 
 .hoveredLinkText:before {
@@ -39,18 +44,12 @@
 }
 
 .icon {
-    margin: 0 10px;
-    font-size: 2.5vw;
-    vertical-align: top;
-    color: white;
+    margin: 0 4px;
+    font-size: 22px;
+    vertical-align: middle;
+    color: var(--accent-2);
 }
 
-@media (max-width: 1200px) {
-    .contact {
-        font-size: 21px;
-    }
-
-    .icon {
-        font-size: 28px;
-    }
+@media (max-width: 600px) {
+    .icon { font-size: 20px; }
 }

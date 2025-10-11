@@ -15,6 +15,10 @@ const Banner = () => {
                     <div className="separator"></div>
                 </Reveal>
                     <h2 className="subHeading">FULL STACK WEB DEVELOPER</h2>
+                    <div className="ctaRow">
+                        <a className="ctaBtn" href="#projects">See Projects</a>
+                        <a className="ctaGhost" href="#contact">Get in Touch</a>
+                    </div>
             </div>
             <div className="downBtn">
                 <Link to="scrollAbout" smooth={true} duration={500} offset={-25} tabIndex={0}>

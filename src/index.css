@@ -1,4 +1,11 @@
 /***** Border-box *****/
+:root{
+  --bg: #B2DBBF;
+  --text: #0f1720;
+  --accent: #70C1B3;
+  --accent-2: #247BA0;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -6,57 +13,50 @@ html {
   box-sizing: inherit;
 }
 
-/***** Global Styles *****/
-
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Raleway', sans-serif;
-  color: white;
-  background: #B2DBBF;
+  font-family: 'Raleway', 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color: var(--text);
+  background: linear-gradient(180deg, #f2f7f4 0%, var(--bg) 100%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
 section {
-  border-bottom: 4px solid black;
-  padding: 30px 0;
+  border-bottom: 3px solid rgba(0,0,0,0.08);
+  padding: 40px 0;
 }
 
 h1, h2 {
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
+  color: #072227;
 }
 
 h1 {
-    margin: 1rem;
+    margin: 1rem 0;
 }
 
 h2 {
-    font-size: 3vw;
+    font-size: clamp(20px, 3.2vw, 40px);
     margin-top: 0.5rem;
     margin-bottom: 1.5rem;
 }
 
-@media (min-width: 768px) {
-  body {
-    font-size: 2vw;
-  }
-}
-
 @media (min-width: 900px) {
   body {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
-
-@media (max-width: 1200px) {  
-    h2 {
-      font-size: 36px;
-    }
+/* Accessible focus styles */
+:focus {
+  outline: none;
 }
 
-@media (min-width: 1600px) {  
-  h2 {
-    font-size: 48px;
-  }
+/* show focus ring when keyboard navigation (focus-visible) */
+:focus-visible {
+  outline: 3px solid rgba(36,123,160,0.18);
+  outline-offset: 3px;
 }

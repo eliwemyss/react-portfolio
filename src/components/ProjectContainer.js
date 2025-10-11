@@ -6,7 +6,7 @@ import styles from './styles/ProjectContainer.css';
 const ProjectContainer = () => {
     let projects = data.map((proj, i) => {
         return (
-            <div key={i}>
+            <div key={i} className="projectItem" style={{ '--i': i }}>
                 <Project order={i%2} {...proj}/>
             </div>
         );
