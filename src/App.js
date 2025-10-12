@@ -282,8 +282,6 @@ const App = () => {
               LinkedIn
             </a>
           </div>
-
-          <p className="text-slate-500 text-sm">(615) 618-6440</p>
         </div>
       </section>
 
