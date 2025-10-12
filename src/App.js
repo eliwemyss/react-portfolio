@@ -266,11 +266,11 @@ const App = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
-              href="mailto:eliwemyss@gmail.com"
+              href="mailto:eli@himynameiseli.com"
               className="flex items-center justify-center gap-2 px-8 py-4 bg-emerald-500 hover:bg-emerald-600 rounded-lg font-semibold transition-colors"
             >
               <Mail size={20} />
-              eliwemyss@gmail.com
+              eli@himynameiseli.com
             </a>
             <a
               href="https://www.linkedin.com/in/eliwemyss/"
