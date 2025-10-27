@@ -40,11 +40,11 @@ const HeroSection = () => {
         </h1>
 
         <p className="text-2xl md:text-3xl mb-4 text-slate-300">
-          Seven years debugging APIs. One year debugging my life on a mountain trail.
+          Five years debugging APIs. One year debugging my life on a mountain trail.
         </p>
 
         <p className="text-xl text-slate-400 mb-8 max-w-2xl mx-auto">
-          Technical Support Engineer who spent 7 years solving impossible problems,
+          Technical Support Engineer who spent 5 years solving impossible problems,
           then hiked 2,190 miles and got a pilot's license just to prove I finish what I start.
         </p>
 

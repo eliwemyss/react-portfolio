@@ -62,7 +62,7 @@ const JourneySection = () => {
             </li>
             <li className="flex items-start gap-2">
               <Zap className="text-emerald-400 flex-shrink-0 mt-1" size={20} />
-              <span>7 years of technical support experience that didn't evaporate</span>
+              <span>5 years of technical support experience that didn't evaporate</span>
             </li>
           </ul>
         </div>
