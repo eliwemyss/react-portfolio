@@ -17,7 +17,7 @@ const JourneySection = () => {
             <Mountain className="text-emerald-400 mb-4" size={48} />
             <h3 className="text-2xl font-bold mb-3">Thru-Hiked the AT</h3>
             <p className="text-slate-300 mb-4">
-              2,190 miles from Georgia to Maine. Five months of daily problem-solving,
+              2,200+ miles from Georgia to Maine. Five months of daily problem-solving,
               resource management, and adapting to whatever nature threw at me.
             </p>
             <p className="text-sm text-slate-400">

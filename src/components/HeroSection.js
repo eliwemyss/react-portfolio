@@ -45,7 +45,7 @@ const HeroSection = () => {
 
         <p className="text-xl text-slate-400 mb-8 max-w-2xl mx-auto">
           Technical Support Engineer who spent 5 years solving impossible problems,
-          then hiked 2,190 miles and got a pilot's license just to prove I finish what I start.
+          then hiked 2,200+ miles and got a pilot's license just to prove I finish what I start.
         </p>
 
         <div className="flex gap-4 justify-center mb-12">

@@ -7,7 +7,7 @@ const TimelineSection = () => {
     { year: '2020-2021', title: 'Sailthru', desc: 'Support Engineer', icon: '⛵' },
     { year: '2021-2023', title: 'ChartHop', desc: 'Senior Support Engineer', icon: '🚀' },
     { year: '2024', title: 'Got My Wings', desc: 'Private Pilot License', icon: '✈️' },
-    { year: '2025', title: 'Walked to Maine', desc: '2,190 miles on the AT', icon: '🥾' },
+    { year: '2025', title: 'Walked to Maine', desc: '2,200+ miles on the AT', icon: '🥾' },
     { year: 'Now', title: "Let's Do This", desc: 'Ready for the next challenge', icon: '💪' },
   ];
 
