@@ -41,7 +41,7 @@ const SkillsSection = () => {
     },
     skillsGrid: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(4, 1fr)',
+      gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
       gap: '1.5rem',
     },
     skillWrapper: {
@@ -52,23 +52,27 @@ const SkillsSection = () => {
       backgroundColor: '#1a1a1a',
       borderRadius: '0.5rem',
       display: 'flex',
-      justifyContent: 'space-between',
+      justifyContent: 'center',
       alignItems: 'center',
       cursor: 'pointer',
       transition: 'all 0.3s ease',
       border: '1px solid transparent',
+      minHeight: '3.5rem',
+      position: 'relative',
     },
     skillName: {
       fontSize: '1rem',
       fontWeight: '500',
       color: '#ffffff',
+      textAlign: 'center',
+      width: '100%',
     },
     skillPercentage: {
       fontSize: '0.9rem',
       color: '#ffffff',
       fontWeight: 'bold',
-      minWidth: '3rem',
-      textAlign: 'right',
+      textAlign: 'center',
+      width: '100%',
     },
   };
 
@@ -113,24 +117,20 @@ const SkillsSection = () => {
                 onMouseEnter={() => setHoveredSkill(idx)}
                 onMouseLeave={() => setHoveredSkill(null)}
               >
-                <span
-                  style={{
-                    ...styles.skillName,
-                    color: hoveredSkill === idx ? '#ffffff' : '#ffffff',
-                  }}
-                >
-                  {skill.name}
-                </span>
-                <motion.span
-                  style={{
-                    ...styles.skillPercentage,
-                    opacity: hoveredSkill === idx ? 1 : 0,
-                  }}
-                  animate={{ opacity: hoveredSkill === idx ? 1 : 0 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  {skill.percentage}%
-                </motion.span>
+                {hoveredSkill === idx ? (
+                  <motion.span
+                    style={styles.skillPercentage}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    {skill.percentage}%
+                  </motion.span>
+                ) : (
+                  <span style={styles.skillName}>
+                    {skill.name}
+                  </span>
+                )}
               </div>
             </motion.div>
           ))}
