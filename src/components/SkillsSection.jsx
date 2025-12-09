@@ -41,7 +41,7 @@ const SkillsSection = () => {
     },
     skillsGrid: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+      gridTemplateColumns: 'repeat(4, 1fr)',
       gap: '1.5rem',
     },
     skillWrapper: {
