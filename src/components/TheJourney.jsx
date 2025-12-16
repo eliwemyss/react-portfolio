@@ -55,6 +55,27 @@ const TheJourney = () => {
       marginTop: '0.25rem',
       color: '#ffffff',
     },
+    testimonials: {
+      marginTop: '3rem',
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+      gap: '1.5rem',
+    },
+    testimonialCard: {
+      backgroundColor: '#111827',
+      border: '1px solid rgba(255,255,255,0.08)',
+      borderRadius: '0.75rem',
+      padding: '1.5rem',
+      boxShadow: '0 8px 20px rgba(0,0,0,0.25)',
+      color: '#e5e7eb',
+      lineHeight: 1.6,
+    },
+    testimonialName: {
+      marginTop: '1rem',
+      fontWeight: 700,
+      color: '#16a34a',
+      fontSize: '0.95rem',
+    },
   };
 
   const journeyItems = [
@@ -65,8 +86,23 @@ const TheJourney = () => {
     { emoji: '🥾', year: '2025', title: 'Walked to Maine', desc: '2,200+ miles on the Appalachian Trail' },
   ];
 
+  const testimonials = [
+    {
+      quote: 'Eli is the person you want when production is on fire. Clear-headed, communicative, and relentless about finding the real root cause.',
+      name: 'Engineering Manager, ChartHop',
+    },
+    {
+      quote: 'He translates deeply technical issues into language customers understand, without losing accuracy. Our escalations were smoother because of him.',
+      name: 'Sr. Support Lead, Sailthru',
+    },
+    {
+      quote: 'Disciplined and thorough. Whether it was API debugging or process documentation, Eli made the team better.',
+      name: 'Director of Support, Campaign Monitor',
+    },
+  ];
+
   return (
-    <section style={styles.section}>
+    <section id="journey-section" style={styles.section}>
       <div style={styles.container}>
         <motion.h2
           style={styles.heading}
@@ -92,6 +128,21 @@ const TheJourney = () => {
                 <div style={styles.timelineTitle}>{item.title}</div>
                 <p style={{ color: '#b4b9c1', marginTop: '0.5rem' }}>{item.desc}</p>
               </div>
+            </motion.div>
+          ))}
+        </div>
+
+        <div style={styles.testimonials}>
+          {testimonials.map((t, idx) => (
+            <motion.div
+              key={idx}
+              style={styles.testimonialCard}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: idx * 0.1 }}
+            >
+              <p>"{t.quote}"</p>
+              <div style={styles.testimonialName}>{t.name}</div>
             </motion.div>
           ))}
         </div>

@@ -91,7 +91,7 @@ const WhatIActuallyDo = () => {
   ];
 
   return (
-    <section style={styles.section}>
+    <section id="what-section" style={styles.section}>
       <div style={styles.container}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

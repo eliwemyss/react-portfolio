@@ -5,11 +5,13 @@ import TheJourney from './components/TheJourney';
 import WhatIActuallyDo from './components/WhatIActuallyDo';
 import SkillsSection from './components/SkillsSection';
 import Contact from './components/Contact';
+import NavBar from './components/NavBar';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <NavBar />
       <HeroSection />
       <AboutMe />
       <WaitYouDidWhat />

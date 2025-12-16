@@ -9,6 +9,40 @@ const WaitYouDidWhat = () => {
       backgroundColor: '#1a1a1a',
       color: '#ffffff',
     },
+    statsRow: {
+      display: 'flex',
+      justifyContent: 'center',
+      gap: '1.5rem',
+      flexWrap: 'wrap',
+      marginBottom: '2.5rem',
+    },
+    statCard: {
+      minWidth: '240px',
+      padding: '1.5rem',
+      borderRadius: '0.75rem',
+      background: 'linear-gradient(135deg, rgba(22, 163, 74, 0.14), rgba(14, 165, 233, 0.12))',
+      border: '1px solid rgba(255, 255, 255, 0.08)',
+      boxShadow: '0 10px 25px rgba(0,0,0,0.25)',
+      textAlign: 'center',
+    },
+    statValue: {
+      fontSize: '2.5rem',
+      fontWeight: '800',
+      color: '#16a34a',
+      marginBottom: '0.5rem',
+      letterSpacing: '-0.01em',
+    },
+    statLabel: {
+      fontSize: '1rem',
+      color: '#e5e7eb',
+      marginBottom: '0.25rem',
+      fontWeight: '600',
+    },
+    statSub: {
+      fontSize: '0.95rem',
+      color: '#cbd5e1',
+      lineHeight: 1.6,
+    },
     container: {
       maxWidth: '1200px',
       margin: '0 auto',
@@ -74,7 +108,7 @@ const WaitYouDidWhat = () => {
   ];
 
   return (
-    <section style={styles.section}>
+    <section id="wait-section" style={styles.section}>
       <div style={styles.container}>
         <motion.h2
           style={styles.heading}
@@ -84,6 +118,39 @@ const WaitYouDidWhat = () => {
         >
           "Wait, you did what?"
         </motion.h2>
+
+        <div style={styles.statsRow}>
+          <motion.div
+            style={styles.statCard}
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div style={styles.statValue}>99%</div>
+            <div style={styles.statLabel}>Customer Satisfaction</div>
+            <div style={styles.statSub}>Across enterprise support queues</div>
+          </motion.div>
+          <motion.div
+            style={styles.statCard}
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <div style={styles.statValue}>2,200 mi</div>
+            <div style={styles.statLabel}>Appalachian Trail</div>
+            <div style={styles.statSub}>Proof of grit, systems thinking, and follow-through</div>
+          </motion.div>
+          <motion.div
+            style={styles.statCard}
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <div style={styles.statValue}>FAA</div>
+            <div style={styles.statLabel}>Private Pilot</div>
+            <div style={styles.statSub}>Disciplined procedures and calm decision-making</div>
+          </motion.div>
+        </div>
 
         <div style={styles.grid}>
           {milestones.map((milestone, index) => (
