@@ -128,7 +128,7 @@ const WaitYouDidWhat = () => {
           >
             <div style={styles.statValue}>99%</div>
             <div style={styles.statLabel}>Customer Satisfaction</div>
-            <div style={styles.statSub}>Across enterprise support queues</div>
+            <div style={styles.statSub}>Enterprise queues; production incidents</div>
           </motion.div>
           <motion.div
             style={styles.statCard}
@@ -138,7 +138,7 @@ const WaitYouDidWhat = () => {
           >
             <div style={styles.statValue}>2,200 mi</div>
             <div style={styles.statLabel}>Appalachian Trail</div>
-            <div style={styles.statSub}>Proof of grit, systems thinking, and follow-through</div>
+            <div style={styles.statSub}>Logistics, systems thinking, relentless follow-through</div>
           </motion.div>
           <motion.div
             style={styles.statCard}
@@ -148,7 +148,7 @@ const WaitYouDidWhat = () => {
           >
             <div style={styles.statValue}>FAA</div>
             <div style={styles.statLabel}>Private Pilot</div>
-            <div style={styles.statSub}>Disciplined procedures and calm decision-making</div>
+            <div style={styles.statSub}>Disciplined checklists; calm, time-pressured decisions</div>
           </motion.div>
         </div>
 

@@ -69,8 +69,6 @@ const WhatIActuallyDo = () => {
     },
   };
 
-  const skills = ['JavaScript', 'React', 'Node.js', 'MongoDB', 'Python', 'Git', 'APIs', 'Troubleshooting', 'Postman', 'JSON', 'Regex'];
-
   const strengths = [
     {
       title: 'Translating Technical → Human',
@@ -99,25 +97,7 @@ const WhatIActuallyDo = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 style={styles.heading}>What I Actually Do</h2>
-          <p style={styles.subheading}>(Besides hiking and flying, obviously)</p>
-
-          <div style={styles.skillsGrid}>
-            {skills.map((skill, index) => (
-              <motion.span
-                key={index}
-                style={styles.skillTag}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
-              >
-                {skill}
-              </motion.span>
-            ))}
-          </div>
-
-          <h3 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '2rem', marginTop: '2rem', color: '#ffffff' }}>
-            The Stuff That Actually Matters
-          </h3>
+          <p style={styles.subheading}>Rapidly untangle tough technical problems and keep customers informed without losing precision.</p>
 
           <div style={styles.strengthsGrid}>
             {strengths.map((strength, index) => (
