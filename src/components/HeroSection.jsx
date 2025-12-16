@@ -77,7 +77,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div style={styles.container}>
+    <div id="hero" style={styles.container}>
       <div style={styles.overlay}>
         <motion.h1
           style={styles.title}
@@ -95,23 +95,44 @@ const HeroSection = () => {
         >
           Technical Support Engineer · Adventurer · Appalachian Trail Thru-Hiker
         </motion.p>
-        <motion.a
-          href="mailto:eli@himynameiseli.com"
-          style={styles.secondaryButton}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-          onMouseEnter={(e) => {
-            e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-            e.target.style.borderColor = '#16a34a';
-          }}
-          onMouseLeave={(e) => {
-            e.target.style.backgroundColor = 'transparent';
-            e.target.style.borderColor = 'white';
-          }}
-        >
-          Let's Talk
-        </motion.a>
+        <div style={styles.buttonContainer}>
+          <motion.a
+            href="mailto:eli@himynameiseli.com"
+            style={styles.secondaryButton}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1 }}
+            onMouseEnter={(e) => {
+              e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+              e.target.style.borderColor = '#16a34a';
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.backgroundColor = 'transparent';
+              e.target.style.borderColor = 'white';
+            }}
+          >
+            Let's Talk
+          </motion.a>
+
+          <motion.a
+            href="/Eli_Wemyss_Resume_2025.pdf"
+            download="Eli_Wemyss_Resume_2025.pdf"
+            style={styles.ctaButton}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1.1 }}
+            onMouseEnter={(e) => {
+              e.target.style.transform = 'translateY(-2px)';
+              e.target.style.boxShadow = '0 12px 20px -5px rgba(22, 163, 74, 0.4)';
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.transform = 'translateY(0)';
+              e.target.style.boxShadow = styles.ctaButton.boxShadow;
+            }}
+          >
+            Download Resume
+          </motion.a>
+        </div>
       </div>
     </div>
   );

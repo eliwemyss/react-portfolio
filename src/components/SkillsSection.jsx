@@ -77,7 +77,7 @@ const SkillsSection = () => {
   };
 
   return (
-    <section style={styles.section}>
+    <section id="skills-section" style={styles.section}>
       <div style={styles.container}>
         <motion.h2
           style={styles.heading}
