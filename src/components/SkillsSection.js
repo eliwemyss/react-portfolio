@@ -1,88 +1,75 @@
-import React, { useState } from 'react';
-import { MessageSquare, Zap, Code, Mountain } from 'lucide-react';
+import React from 'react';
+import { Terminal, Database, Users, Wrench } from 'lucide-react';
 
 const SkillsSection = () => {
-  const [activeSkill, setActiveSkill] = useState(null);
-
-  const skills = [
-    { name: 'JavaScript', level: 90, color: '#f7df1e' },
-    { name: 'React', level: 85, color: '#61dafb' },
-    { name: 'Node.js', level: 80, color: '#68a063' },
-    { name: 'MongoDB', level: 85, color: '#4db33d' },
-    { name: 'Python', level: 75, color: '#3776ab' },
-    { name: 'Git', level: 90, color: '#f05032' },
-    { name: 'APIs', level: 95, color: '#ff6b6b' },
-    { name: 'Troubleshooting', level: 98, color: '#4ecdc4' },
+  const groups = [
+    {
+      title: 'Languages & Frameworks',
+      icon: Terminal,
+      color: 'emerald',
+      skills: ['JavaScript', 'React', 'TypeScript', 'Python', 'Node.js', 'HTML/CSS'],
+    },
+    {
+      title: 'Data & APIs',
+      icon: Database,
+      color: 'sky',
+      skills: ['REST APIs', 'SQL', 'MongoDB', 'JSON/XML', 'Postman', 'Supabase'],
+    },
+    {
+      title: 'Support & Ops',
+      icon: Users,
+      color: 'purple',
+      skills: ['Incident Response', 'Root-Cause Analysis', 'Customer Communication', 'Technical Documentation', 'Escalation Management', 'SLA Tracking'],
+    },
+    {
+      title: 'Tools & Platforms',
+      icon: Wrench,
+      color: 'amber',
+      skills: ['Git', 'Jira', 'Zendesk', 'Vercel', 'Vite', 'Stripe'],
+    },
   ];
+
+  const colorMap = {
+    emerald: { icon: 'text-emerald-400', border: 'border-emerald-500/20', hoverBorder: 'hover:border-emerald-500/50', pill: 'text-emerald-300 bg-emerald-500/10 border-emerald-500/20' },
+    sky: { icon: 'text-sky-400', border: 'border-sky-500/20', hoverBorder: 'hover:border-sky-500/50', pill: 'text-sky-300 bg-sky-500/10 border-sky-500/20' },
+    purple: { icon: 'text-purple-400', border: 'border-purple-500/20', hoverBorder: 'hover:border-purple-500/50', pill: 'text-purple-300 bg-purple-500/10 border-purple-500/20' },
+    amber: { icon: 'text-amber-400', border: 'border-amber-500/20', hoverBorder: 'hover:border-amber-500/50', pill: 'text-amber-300 bg-amber-500/10 border-amber-500/20' },
+  };
 
   return (
     <section className="py-20 px-6">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold mb-4 text-center">What I Actually Do</h2>
+        <h2 className="text-4xl font-bold mb-4 text-center">What I Work With</h2>
         <p className="text-xl text-slate-400 text-center mb-16">
-          (Besides hiking and flying, obviously)
+          Five years in support means I've touched every layer of the stack — usually while it's on fire.
         </p>
 
-        <div className="space-y-6">
-          {skills.map((skill, idx) => (
-            <div
-              key={idx}
-              className="group cursor-pointer"
-              onMouseEnter={() => setActiveSkill(skill.name)}
-              onMouseLeave={() => setActiveSkill(null)}
-            >
-              <div className="flex justify-between mb-2">
-                <span className="font-semibold text-lg">{skill.name}</span>
-                <span className="text-slate-400">
-                  {activeSkill === skill.name ? `${skill.level}%` : ''}
-                </span>
+        <div className="grid md:grid-cols-2 gap-6">
+          {groups.map((group, idx) => {
+            const Icon = group.icon;
+            const colors = colorMap[group.color];
+            return (
+              <div
+                key={idx}
+                className={`bg-slate-800 p-6 rounded-xl border ${colors.border} ${colors.hoverBorder} transition-all`}
+              >
+                <div className="flex items-center gap-3 mb-5">
+                  <Icon className={colors.icon} size={22} />
+                  <h3 className="text-lg font-bold">{group.title}</h3>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {group.skills.map((skill, sIdx) => (
+                    <span
+                      key={sIdx}
+                      className={`px-3 py-1.5 text-sm font-medium rounded-lg border ${colors.pill}`}
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div className="h-3 bg-slate-800 rounded-full overflow-hidden">
-                <div
-                  className="h-full rounded-full transition-all duration-1000 ease-out"
-                  style={{
-                    width: activeSkill === skill.name ? `${skill.level}%` : '0%',
-                    backgroundColor: skill.color,
-                    boxShadow: activeSkill === skill.name ? `0 0 20px ${skill.color}50` : 'none'
-                  }}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-16 bg-slate-800 p-8 rounded-xl">
-          <h3 className="text-2xl font-bold mb-4">The Stuff That Actually Matters</h3>
-          <div className="grid md:grid-cols-2 gap-6 text-slate-300">
-            <div>
-              <MessageSquare className="text-emerald-400 mb-2" size={32} />
-              <h4 className="font-semibold mb-2">Translating Technical → Human</h4>
-              <p className="text-sm text-slate-400">
-                Making engineers sound less like robots and customers feel heard
-              </p>
-            </div>
-            <div>
-              <Zap className="text-sky-400 mb-2" size={32} />
-              <h4 className="font-semibold mb-2">Staying Calm When It's On Fire</h4>
-              <p className="text-sm text-slate-400">
-                Production down? Customer screaming? I'm your guy.
-              </p>
-            </div>
-            <div>
-              <Code className="text-purple-400 mb-2" size={32} />
-              <h4 className="font-semibold mb-2">Actually Understanding the Code</h4>
-              <p className="text-sm text-slate-400">
-                Not just reading error messages - actually knowing what broke and why
-              </p>
-            </div>
-            <div>
-              <Mountain className="text-emerald-400 mb-2" size={32} />
-              <h4 className="font-semibold mb-2">Finishing What I Start</h4>
-              <p className="text-sm text-slate-400">
-                Whether it's a 2,000 mile hike or a gnarly production bug
-              </p>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>
