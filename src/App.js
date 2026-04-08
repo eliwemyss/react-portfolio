@@ -3,6 +3,7 @@ import HeroSection from './components/HeroSection';
 import JourneySection from './components/JourneySection';
 import TimelineSection from './components/TimelineSection';
 import SkillsSection from './components/SkillsSection';
+import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 
@@ -13,6 +14,7 @@ const App = () => {
       <JourneySection />
       <TimelineSection />
       <SkillsSection />
+      <ProjectsSection />
       <ContactSection />
       <Footer />
     </div>
